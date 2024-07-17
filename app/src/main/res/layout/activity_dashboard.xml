@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dashboard.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar (ActionBar) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <!-- Tombol Back -->
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="Back"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical" />
+
+        <!-- Judul Toolbar -->
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dashboard"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Isi dari dashboard -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_below="@id/toolbar">
+
+        <!-- Komponen Kompas -->
+        <Button
+            android:id="@+id/btnCompass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Compass"
+            android:onClick="navigateToKompas" />
+
+        <!-- Komponen Kamera -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="#CCCCCC" />
+
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Camera"
+            android:onClick="onCameraClicked" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginVertical="8dp"/>
+
+        <!-- Komponen Konversi Uang -->
+        <Button
+            android:id="@+id/btnCurrencyConverter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Currency Converter"
+            android:onClick="onCurrencyConverterClicked" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginVertical="8dp"/>
+
+        <!-- Komponen Cari Lokasi -->
+        <Button
+            android:id="@+id/btnLocationSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location Search"
+            android:onClick="onLocationSearchClicked" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginVertical="8dp"/>
+
+        <!-- Komponen To Do List -->
+        <Button
+            android:id="@+id/btnToDoList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To Do List"
+            android:onClick="onToDoListClicked" />
+
+    </LinearLayout>
+
+</RelativeLayout>
